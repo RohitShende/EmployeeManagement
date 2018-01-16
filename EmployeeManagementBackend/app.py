@@ -1,12 +1,12 @@
- Volume in drive E is Sonu
- Volume Serial Number is 1AB8-CFB3
+from flask import Flask
 
- Directory of E:\Studies\Rohit\PROJECTS\EmployeeManagement\EmployeeManagementBackend
+app = Flask(__name__)
 
-01/11/2018  01:50 AM    <DIR>          .
-01/11/2018  01:50 AM    <DIR>          ..
-01/11/2018  01:49 AM    <DIR>          .idea
-01/11/2018  01:50 AM                 0 app.py
-01/11/2018  01:17 AM                 0 hello-world.py
-               2 File(s)              0 bytes
-               3 Dir(s)  48,032,710,656 bytes free
+
+@app.route('/')
+def hello():
+    return '<h1>Hello World</h1>'
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
